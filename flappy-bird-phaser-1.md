@@ -1,29 +1,29 @@
-# How to Make Flappy Bird in HTML5 With Phaser - Part 1
+# Så här gör du Flappy Bird i HTML5 med Phaser &ndash; Del 1
 
 ![](http://lessmilk.com/imgtut/FB1/1.png)
 
-Flappy Bird is a nice little game with easy to understand mechanics, and I thought it would be a perfect fit for an HTML5 game tutorial for beginners. We are going to make a simplified version of Flappy Bird in only 65 lines of Javascript with the Phaser framework.
+Flappy Bird är ett trevligt litet spel med lättbegriplig mekanik, och jag tyckte att det kunde vara perfekt för en handledning i HTML5-spel för nybörjare. Vi ska bygga en förenklad version av Flappy Bird med bara 65 rader JavaScript med ramverket Phaser.
 
-Phaser is a free, open source, and awesome framework to make games playable in any web browser.
+Phaser är ett gratis, fantastiskt öppen källkods-ramverk för att göra spel som fungerar i alla webbläsare.
 
-If you want to play the game we are going to build, [click here](http://lessmilk.com/game/flappy-bird/). You need to press the spacebar or tap on the game to jump.
+Om du vill spela spelet som vi ska bygga,  [klicka här](http://lessmilk.com/game/flappy-bird/). Tryck på mellanslag eller på spelytan för att hoppa.
 
-## Set Up
+## Sätta igång
 
-To start this tutorial you should download [this empty template](http://lessmilk.com/content/flappy-bird/empty.zip) that I made. In it you will find:
+För att starta handledningen behöver du ladda ner [den här tomma mallen](http://lessmilk.com/content/flappy-bird/empty.zip) som jag har förberett. I den hittar du
 
-*   phaser.min.js, the Phaser framework v2.4.3.
-*   index.html, where the game will be displayed.
-*   main.js, a file where we will write all our code.
-*   assets/, a directory with 2 images and one sound effect.
+*   phaser.min.js, Phaser-ramverket v2.4.3.
+*   index.html, där spelet visas på skärmen.
+*   main.js, en fil där vi skriver all vår kod.
+*   assets/, en mapp med två bilder och en ljudeffekt.
 
 ![](http://lessmilk.com/imgtut/FB1/7.png)
 
-## Empty Project
+## Tomt projekt
 
-The first thing we are going to do is to build an empty project.
+Det första vi ska göra är att bygga ett tomt projekt.
 
-Open the index.html file and add this code.
+Öppna filen `index.html` och lägg till den här koden.
 
     <!DOCTYPE html>  
     <html>
@@ -39,9 +39,9 @@ Open the index.html file and add this code.
         </body>  
     </html>  
 
-It will simply load our 2 Javascript files.
+Den laddar helt enkelt våra två JavaScript-filer.
 
-In the main.js file we add this to create an empty Phaser game.
+Vi lägger till detta i filen `main.js` för att skapa ett tomt Phaser-spel.
 
     // Create our 'main' state that will contain the game
     var mainState = {
@@ -70,15 +70,15 @@ In the main.js file we add this to create an empty Phaser game.
     // Start the state to actually start the game
     game.state.start('main');
 
-All we have to do to make a game with Phaser is to fill the `preload()`, `create()` and `update()` functions.
+Det enda vi behöver för att göra ett spel med Phaser är att fylla i funktionerna `preload()`, `create()` och `update()`.
 
-## The Bird
+## Fågeln
 
-Let's first focus on adding a bird to the game that will jump when we press the spacebar key.
+Vi koncentrerar oss först på att lägga till en fågel i spelet som hoppar när vi trycker på mellanslag.
 
-Everything is quite simple and well commented, so you should be able to understand the code below. For better readability I removed the Phaser initialization and states management code that you can see above.
+Allt är rätt enkelt och välkommenterat, så du bör kunna förstå koden nedan. För bättre läsbarhet har jag tagit bort Phasers kod för initiering och tillståndshantering, som du kan se ovan.
 
-First we update the `preload()`, `create()` and `update()` functions.
+Först uppdaterar vi funktionerna `preload()`, `create()` och `update()`.
 
     preload: function() { 
         // Load the bird sprite
@@ -115,7 +115,7 @@ First we update the `preload()`, `create()` and `update()` functions.
             this.restartGame();
     },
 
-And just below this code we add these two new functions.
+Och direkt nedanför den koden lägger till två nya funktioner.
 
     // Make the bird jump 
     jump: function() {
@@ -129,29 +129,30 @@ And just below this code we add these two new functions.
         game.state.start('main');
     },
 
-## Testing
+## Testning
 
-Running a Phaser game directly in a browser doesn't work, that's because Javascript is not allowed to load files from your local file system. To solve that we will have to use a webserver to play and test our game.
+Att köra ett Phaser-spel direkt i webbläsaren fungerar inte, eftersom JavaScript inte får läsa filer från ditt lokala filsystem. FÖr att lösa det behöver vi en webbläsare för att spela och testa vårt spel.
 
-There are a lot of ways to set up a local webserver on a computer and we are going to quickly cover 3 below.
+Det finns många sätt att ha en lokal webbserver på en dator och vi går snabbt igenom tre här nedan.
 
-*   Use Brackets. Open the directory containing the game in the [Brackets editor](http://brackets.io/) and click on the small bolt icon that is in the top right corner of the window. This will directly open your browser with a live preview from a webserver. That's probably the easiest solution.
-*   Use apps. You can download [WAMP](http://www.wampserver.com/en/) (Windows) or [MAMP](https://www.mamp.info/en/) (Mac). They both have a clean user interface with simple set up guides available.
-*   Use the command line. If you have Python installed and you are familiar with the command line, type `python -m SimpleHTTPServer` to have a webserver running in the current directory. Then use the url 127.0.0.1:8000 to play the game.
 
-Once done, you should see this on your screen.
+* Använd Brackets. Öppna mappen som innehåller spelet i [Brackets editor](http://brackets.io/) och klicka på den lilla blixtikonen som finns uppe i högra hörnet i fönstret. Detta öppnar direkt din webbläsare med en aktuell förhandsgranskning från en webbserver. Det är förmodligen den enklaste lösningen.
+* Använd appar. Du kan ladda ner [WAMP](http://www.wampserver.com/en/) (Windows) eller [MAMP](https://www.mamp.info/en/) (Mac). Båda har rena användargränssnitt och enkla installationsanvisningar finns. 
+* Använd kommandoraden. Om du har Python installerat och är bekant med kommandoraden, skriv `python -m SimpleHTTPServer` för att starta en webbläsare som kör i aktuell mapp. Använd sen URL:en 127.0.0.1:8000 för att spela spelet.
+
+När du är klar, bör du se det här på skärmen.
 
 ![](http://lessmilk.com/imgtut/FB1/3.gif)
 
-## The Pipes
+## Rören
 
-A Flappy Bird game without obstacles (the green pipes) is not really interesting, so let's change that.
+Ett Flappy Bird-spel utan några hinder (de gröna rören) är inte värst intressant, så nu ändrar vi på det.
 
-First, we load the pipe sprite in the `preload()` function.
+Börja med att ladda rör-sprajten i funktionen `preload()`.
 
     game.load.image('pipe', 'assets/pipe.png');
 
-Since we are going to handle a lot of pipes in the game, it's easier to use a Phaser feature called "group". The group will simply contain all of our pipes. To create the group we add this in the `create()` function.
+Eftersom vi kommer att hantera många rör i spelet, är det lättare att använda en Phaser-funktion som heter "group". Gruppen kommer helt enkelt att innehålla alla våra rör. För att skapa gruppen, lägger vi till detta i vår funktion `create()`.
 
     // Create an empty group
     this.pipes = game.add.group(); 
