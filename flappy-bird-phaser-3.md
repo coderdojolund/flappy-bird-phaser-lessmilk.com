@@ -1,29 +1,28 @@
-# How to Make Flappy Bird in HTML5 With Phaser &ndash; Part 3
+# Så här gör du Flappy Bird i HTML5 med Phaser &ndash; del 3
 
 ![](http://lessmilk.com/imgtut/FB3/1.png)
 
-In [Part 1](http://lessmilk.com/tutorial/flappy-bird-phaser-1) of this tutorial we created a very basic Flappy Bird clone, and in [Part 2](http://lessmilk.com/tutorial/flappy-bird-phaser-2) we made it more interesting with animations and sounds. In this last part we are going to make the game mobile friendly, and you will see that this is really simple to do with Phaser.
+I [Del 1](http://lessmilk.com/tutorial/flappy-bird-phaser-1) av den här handledningen skapade vi en mycket basal Flappy Bird-klon och i  [Del 2](http://lessmilk.com/tutorial/flappy-bird-phaser-2) gjorde vi den intressantare med animeringar och ljud. I den här sista delen ska vi göra spelet mobilvänligt och du kommer att inse att detta är riktigt lätt att göra med Phaser.
 
-## Mobile Testing
+## Mobiltestning
 
-Before making any change to our project it's important to know how to test a mobile game on desktop. Here's how you can do so in Google Chrome, though you can probably do something similar in other browsers.
+Innan vi gör några ändringar i projektet är det viktigt att veta hur man testar ett mobilspel på desktop. Så här kan du göra i Google Chrome, fast du kan säkert göra något liknande i andra webbläsare.
 
-Launch Google Chrome, open the devtools (top menu > view > developer > developer tools) and click on the tiny mobile icon.
+Starta Google Chrome, öppna utvecklarverktygen (toppmenyn > Fler verktyg > Verktyg för programmerare eller Ctrl-Shift I).
 
 ![](http://lessmilk.com/imgtut/FB3/2.png)
 
-And now you can change the values at the top of the screen to emulate different mobile devices. Just make sure to reload the page every time you change the settings.
+Och nu kan du ändra värdena högst upp i programmerarfönstret för att emulera olika mobila enheter. Tänk bara på att ladda om sidan varje gång du ändrar inställningarna. 
 
 ![](http://lessmilk.com/imgtut/FB3/3.png)
 
-As you can see our game loads on an iPhone 5, but:
+Som du kan se så laddas vårt spel på en iPhone 5, men
+* Vi ser inte hela spelet (det är avklippt till höger).
+* Det är en konstig vit kant till vänster.
+* Det är inte vertikalt centrerat på skärmen.
+* Och vi kan inte använda mellanslag för att hoppa.
 
-*   We don't see the whole game (it's cropped on the right).
-*   There's a weird white border on the left.
-*   It's not centred on the screen vertically.
-*   And we can't use the spacebar to jump.
-
-Let's fix all of this.
+Nu fixar vi allt det.
 
 ## Scaling
 
