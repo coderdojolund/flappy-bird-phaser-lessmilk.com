@@ -2,7 +2,7 @@
 
 ![](http://lessmilk.com/imgtut/FB3/1.png)
 
-In [Part 1](/tutorial/flappy-bird-phaser-1) of this tutorial we created a very basic Flappy Bird clone, and in [Part 2](/tutorial/flappy-bird-phaser-2) we made it more interesting with animations and sounds. In this last part we are going to make the game mobile friendly, and you will see that this is really simple to do with Phaser.
+In [Part 1](http://lessmilk.com/tutorial/flappy-bird-phaser-1) of this tutorial we created a very basic Flappy Bird clone, and in [Part 2](http://lessmilk.com/tutorial/flappy-bird-phaser-2) we made it more interesting with animations and sounds. In this last part we are going to make the game mobile friendly, and you will see that this is really simple to do with Phaser.
 
 ## Mobile Testing
 
