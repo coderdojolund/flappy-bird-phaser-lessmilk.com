@@ -157,7 +157,7 @@ Eftersom vi kommer att hantera många rör i spelet, är det lättare att använ
     // Create an empty group
     this.pipes = game.add.group(); 
 
-Now we need a new function to add a pipe in the game. We can do that with a new function.
+Nu behöver vi en ny funktion som lägger till ett rör i spelet. Vi kan göra det med en ny funktion.
 
     addOnePipe: function(x, y) {
         // Create a pipe at the position x and y
@@ -177,7 +177,7 @@ Now we need a new function to add a pipe in the game. We can do that with a new 
         pipe.outOfBoundsKill = true;
     },
 
-The previous function creates one pipe, but we need to display 6 pipes in a row with a hole somewhere in the middle. So let's create a new function that does just that.
+Den föregående funktionen skapar ett rör, men vi behöver visa sex rör på raden med ett hål någonstant i mitten. Så vi skapar en ny funktion som gör precis det.
 
     addRowOfPipes: function() {
         // Randomly pick a number between 1 and 5
@@ -191,44 +191,44 @@ The previous function creates one pipe, but we need to display 6 pipes in a row 
                 this.addOnePipe(400, i * 60 + 10);   
     },
 
-Here's an image to make things more clear, for when `hole = 2`.
+Här är en bild för att göra saker och ting tydligare, för fallet `hole = 2`.
 
 ![](http://lessmilk.com/imgtut/FB1/6.png)
 
-To actually add pipes in our game we need to call the `addRowOfPipes()` function every 1.5 seconds. We can do this by adding a timer in the `create()` function.
+För att faktiskt lägga till rör i spelet behöver vi anropa funktionen `addRowOfPipes()` function var 1,5 sekund. Vi kan göra detta genom att lägga till en timer i funktionen `create()`.
 
     this.timer = game.time.events.loop(1500, this.addRowOfPipes, this); 
 
-Now you can save your file and test the code. This is slowly starting to look like a real game.
+Nu kan du spara dina filer och testa koden. Det börjar så sakteliga likna ett riktigt spel.
 
 ![](http://lessmilk.com/imgtut/FB1/4.gif)
 
-## Scoring and Collisions
+## Poängräkning och krockar
 
-The last thing we need to finish the game is adding a score and handling collisions. And this is quite easy to do.
+De sista vi behöver för att avsluta spelet är att lägga till poäng och hantera krockar. Och det är ganska lätt att göra.
 
-We add this in the `create()` function to display the score in the top left.
+Vi lägger till detta i funktionen `create()` för att visa poängen uppe till vänster.
 
     this.score = 0;
     this.labelScore = game.add.text(20, 20, "0", 
         { font: "30px Arial", fill: "#ffffff" });   
 
-And we put this in the `addRowOfPipes()`, to increase the score by 1 each time new pipes are created.
+Och vi sätter in detta i `addRowOfPipes()` för att öka poängen med ett varje gång nya rör skapas.
 
     this.score += 1;
     this.labelScore.text = this.score;  
 
-Next, we add this line in the `update()` function to call `restartGame()` each time the bird collides with a pipe from the `pipes` group.
+Sedan lägger vi till den här raden i funktionen `update()` för att anropa `restartGame()` varje gång fågeln krockar med ett rör i gruppen `pipes`.
 
     game.physics.arcade.overlap(
         this.bird, this.pipes, this.restartGame, null, this);
 
-And we are done! Congratulations, you now have a Flappy Bird clone in HTML5\.
+Och vi är klara! Grattis; nu har du en Flappy Bird-klon i HTML5.
 
 ![](http://lessmilk.com/imgtut/FB1/5.gif)
 
-## What's Next?
+## Vad händer härnäst?
 
-The game is working but it's a little bit boring. In the next part of this tutorial we'll see how we can make it better by adding sounds and animations. [Read Part 2](http://lessmilk.com/tutorial/flappy-bird-phaser-2).
+Spelet fungerar men det är lite tråkigt. I nästa del av den här handledningen ska vi se hur vi kan förbättra spelet genom att lägga till ljud och animeringar. [Läs Del 2](http://lessmilk.com/tutorial/flappy-bird-phaser-2).
 
-For your information, I also wrote a book on how to make a full featured game with Phaser. More information on [DiscoverPhaser.com](http://www.discoverphaser.com).
+För kännedom, har jag också skrivit en bok om hur man gör ett fullfjädrat spel med Phaser. Mer inormation på [DiscoverPhaser.com](http://www.discoverphaser.com).
