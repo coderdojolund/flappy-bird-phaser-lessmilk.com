@@ -1,28 +1,28 @@
-# How to Make Flappy Bird in HTML5 With Phaser - Part 2
+#Så här gör du Flappy Bird i HTML5 med Phaser &ndash; Del 2
 [_Det engelska originalet hittar du här_](http://www.lessmilk.com/tutorial/flappy-bird-phaser-2)
 ![](http://lessmilk.com/imgtut/FB2/1.png)
 
-In the [first part](http://lessmilk.com/tutorial/flappy-bird-phaser-1) of this tutorial we did a simple Flappy Bird clone. It was nice, but quite boring to play. In this part we will see how to add animations and sounds. We won't change the game's mechanics, but the game will feel a lot more interesting.
+I [första delen](http://lessmilk.com/tutorial/flappy-bird-phaser-1) av den här handledningen gjorde vi en enkel Flappy Bird-klon. Den var trevlig, men ganska tråkig att spela. I den här delen ska vi se hur man lägger till animeringar och ljud. Vi ändrar inte spelets mekanik, men spelet kommer att kännas mycket mer intressant.
 
-Open the main.js file that we created in the last part, and we are good to go.
+Öppna filen `main.js`som vi skapade i senaste delen, så är vi redo att sätta igång.
 
-## Add Fly Animation
+## Lägg till flyktanimering
 
-The bird is moving up and down in a quite boring way. Let's improve that by adding some animations like in the original game.
+Fågeln rör sig upp och ner på ett rätt tråkigt sätt. Vi förbättrar det genom att lägga till några animeringar som i originalspelet.
 
 ![](http://lessmilk.com/imgtut/FB2/5.gif)
 
-You can see that:
+Du kan se att:
 
-*   The bird slowly rotates downward, up to a certain point.
-*   And when the bird jumps, it rotates upward.
+* Fågeln sakta roterar neråt, till ett visst läge.
+* Och när fågeln hoppar, roterar den uppåt.
 
-The first one is easy. We just need to add this in the `update()` function.
+Den första biten är lätt. Vi behöver bara lägga till detta i funktionen `update()`.
 
     if (this.bird.angle < 20)
         this.bird.angle += 1; 
 
-For the second one, we could simply add `this.bird.angle = -20;` in the `jump()` function. However, changing instantly the angle will look weird. Instead, we are going to make the bird change its angle over a short period of time. We can do so by creating an animation in the `jump()` function.
+För andra biten skulle vi helt enkelt kunna lägga till `this.bird.angle = -20;` i funktionen `jump()`. Men att plötsligt ändra vinkeln ser knasigt ut. Istället ska vi få fågeln att ändra sin vinkel under kort tid. Vi kan göra det genom att skapa en animering i funktionen `jump()`.
 
     // Create an animation on the bird
     var animation = game.add.tween(this.bird);
@@ -33,33 +33,33 @@ For the second one, we could simply add `this.bird.angle = -20;` in the `jump()`
     // And start the animation
     animation.start(); 
 
-For your information, the preceding code can be rewritten in a single line like this.
+För kännedom kan koden ovan skrivas som en enda rad så här.
 
     game.add.tween(this.bird).to({angle: -20}, 100).start(); 
 
-If you test the game right now, you will notice that the bird is not rotating like the original Flappy Bird. It's rotating like the drawing on the left, and we want it to look like the one on the right.
+Om du testar spelet just nu, kommer du att se att fågeln inte roterar som Flappy Bird i original. Den roterar som ritningen till vänster, och vi vill att det ska se ut som den till höger.
 
 ![](http://lessmilk.com/imgtut/FB2/2.png)
 
-What we need to do is change the center of rotation of the bird (the red dot above) called "anchor". So we add this line of code in the `create()` function.
+Det vi behöver göra är att ändra rotationscentrum på fågeln (röda punkten ovan), som kallas "anchor" (ankare). Så vi lägger till den här kodraden i funktionen `create()`.
 
      // Move the anchor to the left and downward
     this.bird.anchor.setTo(-0.2, 0.5); 
 
-If you test the game now, the animation should look a lot better.
+Om du testar spelet nu, bör animeringen se mycket bättre ut.
 
 ![](http://lessmilk.com/imgtut/FB2/3.gif)
 
-## Add Dead Animation
+## Lägg till dödsanimering
 
-When the bird dies, we restart the game instantly. Instead, we are going to make the bird fall off the screen.
+När fågeln dör, startar vi om spelet direkt. Istället ska vi få fågeln att ramla nerför skärmen.
 
-First, we update this line of code in the `update()` function to call `hitPipe()` instead of `restartGame()` when the bird hit a pipe.
+Först ändrar vi den här kodraden i `update()`-funktionen så att den anropas `hitPipe()` istället för `restartGame()` när fågeln träffar ett rör.
 
     game.physics.arcade.overlap(
         this.bird, this.pipes, this.hitPipe, null, this);  
 
-Now we create the new `hitPipe()` function.
+Nu skapar vi den nya funktionen `hitPipe()`.
 
     hitPipe: function() {
         // If the bird has already hit a pipe, do nothing
@@ -79,37 +79,37 @@ Now we create the new `hitPipe()` function.
         }, this);
     }, 
 
-Last thing, we don't want to be able to make the bird jump when it's dead. So we edit the `jump()` by adding this 2 lines at the beginning of the function.
+Slutligen så vill vi inte kunna få fågeln att hoppa när den är död. Så vi ändrar `jump()` genom att lägga till de här två raderna i funktionens början.
 
     if (this.bird.alive == false)
         return;  
 
-And we are done adding animations.
+Och så var vi klara med att lägga till animeringar.
 
 ![](http://lessmilk.com/imgtut/FB2/4.gif)
 
-## Add Sound
+## Lägg till ljud
 
-Adding sounds is super easy with Phaser.
+Att lägga till ljud är busenkelt med Phaser.
 
-We start by loading the jump sound in the `preload()` function.
+Vi börjar med att ladda hoppljudet i funktionen `preload()`.
 
     game.load.audio('jump', 'assets/jump.wav'); 
 
-Now we add the sound in the game by putting this in the `create()` function.
+Nu lägger vi till ljudet i spelet genom att ha följande i `create()`-funktionen.
 
     this.jumpSound = game.add.audio('jump'); 
 
-Finally we add this line in the `jump()` function to actually play the sound effect.
+Slutligen lägger vi till den här raden i funktionen `jump()` för att faktiskt spela ljudeffekten.
 
     this.jumpSound.play(); 
 
-And that's it, we now have animations and sounds in the game!
+Och det var det; nu har vi animeringar och ljud i spelet.
 
-## What's Next
+## Vad händer nu?
 
-In only a few lines of code we managed to make the game a lot better, that's the power of Phaser. In the next part of this tutorial we will see how to make this game mobile friendly. [Read Part 3](http://lessmilk.com/tutorial/flappy-bird-phaser-3).
+Med bara några få kodrader har vi lyckats göra spelet mycket bättre; det är styrkan med Phaser. I nästa del av den här handledningen ska vi se hur vi gör spelet mobilvänligt. [Läs Del 3](http://lessmilk.com/tutorial/flappy-bird-phaser-3).
 
-For your information, I also wrote a book on how to make a full featured game with Phaser. More information on: [DiscoverPhaser.com](http://www.discoverphaser.com).
+För kännedom har jag också skrivit en bok om hur man gör ett fullfjädrat spel med Phaser. Mer information på [DiscoverPhaser.com](http://www.discoverphaser.com).
 
 [_Det engelska originalet hittar du här_](http://www.lessmilk.com/tutorial/flappy-bird-phaser-2)
