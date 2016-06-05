@@ -231,6 +231,6 @@ Och vi är klara! Grattis; nu har du en Flappy Bird-klon i HTML5.
 
 Spelet fungerar men det är lite tråkigt. I nästa del av den här handledningen ska vi se hur vi kan förbättra spelet genom att lägga till ljud och animeringar. [Läs Del 2](http://lessmilk.com/tutorial/flappy-bird-phaser-2).
 
-För kännedom, har jag också skrivit en bok om hur man gör ett fullfjädrat spel med Phaser. Mer inormation på [DiscoverPhaser.com](http://www.discoverphaser.com).
+För kännedom har jag också skrivit en bok om hur man gör ett fullfjädrat spel med Phaser. Mer information på [DiscoverPhaser.com](http://www.discoverphaser.com).
 
 [_Det engelska originalet hittar du här_](http://www.lessmilk.com/tutorial/flappy-bird-phaser-1)
