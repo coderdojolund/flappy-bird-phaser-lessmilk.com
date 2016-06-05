@@ -1,5 +1,5 @@
 # Så här gör du Flappy Bird i HTML5 med Phaser &ndash; Del 3
-
+[_Det engelska originalet hittar du här_](http://www.lessmilk.com/tutorial/flappy-bird-phaser-3)
 ![](http://lessmilk.com/imgtut/FB3/1.png)
 
 I [Del 1](http://lessmilk.com/tutorial/flappy-bird-phaser-1) av den här handledningen skapade vi en mycket basal Flappy Bird-klon och i  [Del 2](http://lessmilk.com/tutorial/flappy-bird-phaser-2) gjorde vi den intressantare med animeringar och ljud. I den här sista delen ska vi göra spelet mobilvänligt och du kommer att inse att detta är riktigt lätt att göra med Phaser.
@@ -85,3 +85,5 @@ Med cirka 10 rader kod lyckades vi göra vårt spel mobilvänligt; det är rätt
 Detta var sista delen av Flappy Bird-handledningen. Om du vill lära dig mer om Phaser, kolla in min e-bok Discover Phaser. Den förklarar i detalj hur man bygger en fullfjädrat spel med Phaser. Mer info på [DiscoverPhaser.com](http://www.discoverphaser.com).
 
 [![](http://lessmilk.com/img/phaserbook.jpg)](http://www.discoverphaser.com)
+
+[_Det engelska originalet hittar du här_](http://www.lessmilk.com/tutorial/flappy-bird-phaser-3)
