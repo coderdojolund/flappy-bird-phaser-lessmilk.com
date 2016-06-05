@@ -2,7 +2,7 @@
 [_Det engelska originalet hittar du här_](http://www.lessmilk.com/tutorial/flappy-bird-phaser-2)
 ![](http://lessmilk.com/imgtut/FB2/1.png)
 
-I [första delen](http://lessmilk.com/tutorial/flappy-bird-phaser-1) av den här handledningen gjorde vi en enkel Flappy Bird-klon. Den var trevlig, men ganska tråkig att spela. I den här delen ska vi se hur man lägger till animeringar och ljud. Vi ändrar inte spelets mekanik, men spelet kommer att kännas mycket mer intressant.
+I [första delen](flappy-bird-phaser-1.md) av den här handledningen gjorde vi en enkel Flappy Bird-klon. Den var trevlig, men ganska tråkig att spela. I den här delen ska vi se hur man lägger till animeringar och ljud. Vi ändrar inte spelets mekanik, men spelet kommer att kännas mycket mer intressant.
 
 Öppna filen `main.js`som vi skapade i senaste delen, så är vi redo att sätta igång.
 
@@ -108,7 +108,7 @@ Och det var det; nu har vi animeringar och ljud i spelet.
 
 ## Vad händer nu?
 
-Med bara några få kodrader har vi lyckats göra spelet mycket bättre; det är styrkan med Phaser. I nästa del av den här handledningen ska vi se hur vi gör spelet mobilvänligt. [Läs Del 3](http://lessmilk.com/tutorial/flappy-bird-phaser-3).
+Med bara några få kodrader har vi lyckats göra spelet mycket bättre; det är styrkan med Phaser. I nästa del av den här handledningen ska vi se hur vi gör spelet mobilvänligt. [Läs Del 3](flappy-bird-phaser-3.md).
 
 För kännedom har jag också skrivit en bok om hur man gör ett fullfjädrat spel med Phaser. Mer information på [DiscoverPhaser.com](http://www.discoverphaser.com).
 
