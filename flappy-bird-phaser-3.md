@@ -2,7 +2,7 @@
 [_Det engelska originalet hittar du här_](http://www.lessmilk.com/tutorial/flappy-bird-phaser-3)
 ![](http://lessmilk.com/imgtut/FB3/1.png)
 
-I [Del 1](http://lessmilk.com/tutorial/flappy-bird-phaser-1) av den här handledningen skapade vi en mycket basal Flappy Bird-klon och i  [Del 2](http://lessmilk.com/tutorial/flappy-bird-phaser-2) gjorde vi den intressantare med animeringar och ljud. I den här sista delen ska vi göra spelet mobilvänligt och du kommer att inse att detta är riktigt lätt att göra med Phaser.
+I [Del 1](flappy-bird-phaser-1.md) av den här handledningen skapade vi en mycket basal Flappy Bird-klon och i  [Del 2](flappy-bird-phaser-2.md) gjorde vi den intressantare med animeringar och ljud. I den här sista delen ska vi göra spelet mobilvänligt och du kommer att inse att detta är riktigt lätt att göra med Phaser.
 
 ## Mobiltestning
 
