@@ -1,5 +1,5 @@
 # How to Make Flappy Bird in HTML5 With Phaser - Part 2
-
+[_Det engelska originalet hittar du här_](http://www.lessmilk.com/tutorial/flappy-bird-phaser-2)
 ![](http://lessmilk.com/imgtut/FB2/1.png)
 
 In the [first part](http://lessmilk.com/tutorial/flappy-bird-phaser-1) of this tutorial we did a simple Flappy Bird clone. It was nice, but quite boring to play. In this part we will see how to add animations and sounds. We won't change the game's mechanics, but the game will feel a lot more interesting.
@@ -111,3 +111,5 @@ And that's it, we now have animations and sounds in the game!
 In only a few lines of code we managed to make the game a lot better, that's the power of Phaser. In the next part of this tutorial we will see how to make this game mobile friendly. [Read Part 3](http://lessmilk.com/tutorial/flappy-bird-phaser-3).
 
 For your information, I also wrote a book on how to make a full featured game with Phaser. More information on: [DiscoverPhaser.com](http://www.discoverphaser.com).
+
+[_Det engelska originalet hittar du här_](http://www.lessmilk.com/tutorial/flappy-bird-phaser-2)
