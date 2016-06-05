@@ -1,2 +1,7 @@
 # flappy-bird-phaser-lessmilk.com
-Swedish translation of the lessmilk.com tutorial
+Svensk översättning av originalet som återfinns på lessmilk.com:
+* [Del 1](http://www.lessmilk.com/tutorial/flappy-bird-phaser-1)
+* [Del 2](http://www.lessmilk.com/tutorial/flappy-bird-phaser-2)
+* [Del 3](http://www.lessmilk.com/tutorial/flappy-bird-phaser-3)
+
+Thanks to Thomas Palef for the nice intro!
