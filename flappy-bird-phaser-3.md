@@ -76,7 +76,7 @@ Det sista steget är att göra det möjligt att hoppa med fågeln när vi rör s
 
 ![](http://lessmilk.com/imgtut/FB3/5.gif)
 
-Och nu kan du spelet Flappy Bird-klonen på desktop och på mobila enheter :-)
+Och nu kan du spela Flappy Bird-klonen på desktop och på mobila enheter :-)
 
 ## Slutsats
 
