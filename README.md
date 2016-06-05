@@ -4,4 +4,4 @@ Svensk översättning av originalet som återfinns på lessmilk.com:
 * [Del 2](http://www.lessmilk.com/tutorial/flappy-bird-phaser-2)
 * [Del 3](http://www.lessmilk.com/tutorial/flappy-bird-phaser-3)
 
-Thanks to Thomas Palef for the nice intro!
+_Thanks to Thomas Palef for the nice intro!_
