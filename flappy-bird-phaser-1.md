@@ -177,7 +177,7 @@ Nu behöver vi en ny funktion som lägger till ett rör i spelet. Vi kan göra d
         pipe.outOfBoundsKill = true;
     },
 
-Den föregående funktionen skapar ett rör, men vi behöver visa sex rör på raden med ett hål någonstant i mitten. Så vi skapar en ny funktion som gör precis det.
+Den föregående funktionen skapar ett rör, men vi behöver visa sex rör på raden med ett hål någonstans i mitten. Så vi skapar en ny funktion som gör precis det.
 
     addRowOfPipes: function() {
         // Randomly pick a number between 1 and 5
@@ -195,7 +195,7 @@ Här är en bild för att göra saker och ting tydligare, för fallet `hole = 2`
 
 ![](http://lessmilk.com/imgtut/FB1/6.png)
 
-För att faktiskt lägga till rör i spelet behöver vi anropa funktionen `addRowOfPipes()` function var 1,5 sekund. Vi kan göra detta genom att lägga till en timer i funktionen `create()`.
+För att faktiskt lägga till rör i spelet behöver vi anropa funktionen `addRowOfPipes()` var 1,5:e sekund. Vi kan göra detta genom att lägga till en timer i funktionen `create()`.
 
     this.timer = game.time.events.loop(1500, this.addRowOfPipes, this); 
 
