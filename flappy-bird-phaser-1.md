@@ -115,7 +115,7 @@ Först uppdaterar vi funktionerna `preload()`, `create()` och `update()`.
             this.restartGame();
     },
 
-Och direkt nedanför den koden lägger till två nya funktioner.
+Och direkt nedanför den koden lägger vi till de här två nya funktionerna.
 
     // Make the bird jump 
     jump: function() {
