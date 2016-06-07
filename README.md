@@ -1,7 +1,8 @@
 # flappy-bird-phaser-lessmilk.com
 Svensk översättning av originalet som återfinns på lessmilk.com:
-* [Del 1](http://www.lessmilk.com/tutorial/flappy-bird-phaser-1)
-* [Del 2](http://www.lessmilk.com/tutorial/flappy-bird-phaser-2)
-* [Del 3](http://www.lessmilk.com/tutorial/flappy-bird-phaser-3)
+* [Del 0: Installera brackets](flappy-bird-phaser-0.md)
+* [Del 1 på svenska](flappy-bird-phaser-1.md) [(engelska)](http://www.lessmilk.com/tutorial/flappy-bird-phaser-1)
+* [Del 2 på svenska](flappy-bird-phaser-2.md) [(engelska)](http://www.lessmilk.com/tutorial/flappy-bird-phaser-2)
+* [Del 3 på svenska](flappy-bird-phaser-3.md) [(engelska)](http://www.lessmilk.com/tutorial/flappy-bird-phaser-3)
 
-_A big Thanks to Thomas Palef for the nice intro!_
+_A big Thanks to Thomas Palef for this nice intro to Phaser!_
