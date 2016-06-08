@@ -8,6 +8,7 @@ var mainState = {
     preload: function () {
         // Load the bird sprite
         game.load.image('bird', 'assets/bird.png');
+        game.load.image('pipe', 'assets/pipe.png');
     },
 
     create: function () {
@@ -30,6 +31,10 @@ var mainState = {
         // Call the 'jump' function when the spacekey is hit
         var spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         spaceKey.onDown.add(this.jump, this);
+        
+        // Create an empty group
+        this.pipes = game.add.group();
+        this.timer = game.time.events.loop(1500, this.addRowOfPipes, this);
     },
 
     update: function () {
@@ -41,16 +46,48 @@ var mainState = {
     },
     
     // Make the bird jump 
-    jump: function() {
+    jump: function () {
         // Add a vertical velocity to the bird
         this.bird.body.velocity.y = -350;
     },
 
     // Restart the game
-    restartGame: function() {
+    restartGame: function () {
         // Start the 'main' state, which restarts the game
         game.state.start('main');
     },
+    
+    addOnePipe: function (x, y) {
+        // Create a pipe at the position x and y
+        var pipe = game.add.sprite(x, y, 'pipe');
+
+        // Add the pipe to our previously created group
+        this.pipes.add(pipe);
+
+        // Enable physics on the pipe 
+        game.physics.arcade.enable(pipe);
+
+        // Add velocity to the pipe to make it move left
+        pipe.body.velocity.x = -200;
+
+        // Automatically kill the pipe when it's no longer visible 
+        pipe.checkWorldBounds = true;
+        pipe.outOfBoundsKill = true;
+    },
+
+    addRowOfPipes: function () {
+        // Randomly pick a number between 1 and 5
+        // This will be the hole position
+        var i, hole = Math.floor(Math.random() * 5) + 1;
+
+        // Add the 6 pipes 
+        // With one big hole at position 'hole' and 'hole + 1'
+        for (i = 0; i < 8; i += 1) {
+            if (i !== hole && i !== hole + 1) {
+                this.addOnePipe(400, i * 60 + 10);
+            }
+        }
+    }
 };
 
 // Initialize Phaser, and create a 400px by 490px game
