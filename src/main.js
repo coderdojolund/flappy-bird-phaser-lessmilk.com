@@ -9,6 +9,7 @@ var mainState = {
         // Load the bird sprite
         game.load.image('bird', 'assets/bird.png');
         game.load.image('pipe', 'assets/pipe.png');
+        game.load.audio('jump', 'assets/jump.wav');
     },
 
     create: function () {
@@ -20,6 +21,7 @@ var mainState = {
 
         // Display the bird at the position x=100 and y=245
         this.bird = game.add.sprite(100, 245, 'bird');
+        this.jumpSound = game.add.audio('jump'); 
 
         // Add physics to the bird
         // Needed for: movements, gravity, collisions, etc.
@@ -86,10 +88,11 @@ var mainState = {
 
         // Create an animation on the bird
         var animation = game.add.tween(this.bird);
-
+        
         // Change the angle of the bird to -20° in 100 milliseconds
         animation.to({angle: -20}, 100);
-
+        this.jumpSound.play(); 
+        
         // And start the animation
         animation.start();
     },
