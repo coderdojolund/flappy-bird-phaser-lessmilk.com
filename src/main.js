@@ -51,6 +51,9 @@ var mainState = {
         // Call the 'jump' function when the spacekey is hit
         var spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         spaceKey.onDown.add(this.jump, this);
+
+        // Call the 'jump' function when we tap/click on the screen
+        game.input.onDown.add(this.jump, this);        
         
         // Create an empty group
         this.pipes = game.add.group();
