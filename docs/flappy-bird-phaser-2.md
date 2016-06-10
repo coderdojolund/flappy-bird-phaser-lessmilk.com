@@ -50,6 +50,8 @@ Om du testar spelet nu, bör animeringen se mycket bättre ut.
 
 ![](http://lessmilk.com/imgtut/FB2/3.gif)
 
+[Här ser du kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/1.4_Scoring_and_collisions...2.0_Flight_animation)
+
 ## Lägg till dödsanimering
 
 När fågeln dör, startar vi om spelet direkt. Istället ska vi få fågeln att ramla nerför skärmen.
@@ -88,6 +90,8 @@ Och så var vi klara med att lägga till animeringar.
 
 ![](http://lessmilk.com/imgtut/FB2/4.gif)
 
+[Här ser du kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/2.0_Flight_animation...2.1_Death_animation)
+
 ## Lägg till ljud
 
 Att lägga till ljud är busenkelt med Phaser.
@@ -105,6 +109,8 @@ Slutligen lägger vi till den här raden i funktionen `jump()` för att faktiskt
     this.jumpSound.play(); 
 
 Och det var det; nu har vi animeringar och ljud i spelet.
+
+[Här ser du kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/2.1_Death_animation...2.2_Sound)
 
 ## Vad händer nu?
 
