@@ -13,9 +13,9 @@ Om du vill spela spelet som vi ska bygga,  [klicka här](http://lessmilk.com/gam
 För att starta handledningen behöver du ladda ner [den här tomma mallen](http://lessmilk.com/content/flappy-bird/empty.zip) som jag har förberett. I den hittar du
 
 *   phaser.min.js, Phaser-ramverket v2.4.3.
-*   index.html, där spelet visas på skärmen.
-*   main.js, en fil där vi skriver all vår kod.
-*   assets/, en mapp med två bilder och en ljudeffekt.
+*   *index.html*, där spelet visas på skärmen.
+*   *main.js*, en fil där vi skriver all vår kod.
+*   *assets/*, en mapp med två bilder och en ljudeffekt.
 
 ![](http://lessmilk.com/imgtut/FB1/7.png)
 
@@ -30,8 +30,8 @@ Det första vi ska göra är att bygga ett tomt projekt.
         <head>  
             <meta charset="utf-8" />
             <title> Flappy Bird Clone </title>
-            <script type="text/javascript" src="phaser.min.js"></script>
-            <script type="text/javascript" src="main.js"></script>
+            <script src="//cdn.jsdelivr.net/phaser/2.4.8/phaser.js"></script>
+            <script src="main.js"></script>
         </head>
 
         <body>
@@ -44,6 +44,11 @@ Den laddar helt enkelt våra två JavaScript-filer.
 Vi lägger till detta i filen `main.js` för att skapa ett tomt Phaser-spel.
 
     // Create our 'main' state that will contain the game
+    /*global Phaser */
+    /*jslint node: true */
+    'use strict';
+
+    var game;
     var mainState = {
         preload: function() { 
             // This function will be executed at the beginning     
@@ -62,7 +67,7 @@ Vi lägger till detta i filen `main.js` för att skapa ett tomt Phaser-spel.
     };
 
     // Initialize Phaser, and create a 400px by 490px game
-    var game = new Phaser.Game(400, 490);
+    game = new Phaser.Game(400, 490);
 
     // Add the 'mainState' and call it 'main'
     game.state.add('main', mainState); 
@@ -111,8 +116,9 @@ Först uppdaterar vi funktionerna `preload()`, `create()` och `update()`.
     update: function() {
         // If the bird is out of the screen (too high or too low)
         // Call the 'restartGame' function
-        if (this.bird.y < 0 || this.bird.y > 490)
+        if (this.bird.y < 0 || this.bird.y > 490) {
             this.restartGame();
+        }
     },
 
 Och direkt nedanför den koden lägger vi till de här två nya funktionerna.
@@ -128,6 +134,8 @@ Och direkt nedanför den koden lägger vi till de här två nya funktionerna.
         // Start the 'main' state, which restarts the game
         game.state.start('main');
     },
+
+[Här finns en summering av våra kodändringar för det här avsnittet](http://Example.com)
 
 ## Testning
 
