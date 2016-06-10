@@ -67,6 +67,8 @@ Du bör nu se att spelet tar upp hela bredden på alla mobila enheter (upp till 
 
 ![](http://lessmilk.com/imgtut/FB3/4.png)
 
+[Här ser du kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/2.2_Sound...3.0_Scaling)
+
 ## Att hoppa
 
 Det sista steget är att göra det möjligt att hoppa med fågeln när vi rör skärmen. Detta kan göras genom att lägga till en enda kodrad i funktionen `create()`.
@@ -78,7 +80,9 @@ Det sista steget är att göra det möjligt att hoppa med fågeln när vi rör s
 
 Och nu kan du spela Flappy Bird-klonen på desktop och på mobila enheter :-)
 
-## Slutsats
+[Här ser du kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/3.0_Scaling...3.1_Jumping)
+
+## Sammanfattning
 
 Med cirka 10 rader kod lyckades vi göra vårt spel mobilvänligt; det är rätt coolt!
 
