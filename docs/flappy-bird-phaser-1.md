@@ -135,7 +135,7 @@ Och direkt nedanför den koden lägger vi till de här två nya funktionerna.
         game.state.start('main');
     },
 
-[Här finns en summering av våra kodändringar för det här avsnittet](http://Example.com)
+[Här kan du se kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/1.1_Basic_code_template...1.2_Add_bird_sprite)
 
 ## Testning
 
