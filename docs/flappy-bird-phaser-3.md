@@ -63,7 +63,7 @@ Raden `game.scale.setMinMax()` är frivillig, men det är god praxis att använd
 
 Lägg märke till att du kan ha de två sista raderna utanför `if`-villkoret om du vill ha spelet centrerat på desktopversionen också.
 
-Du bör nu se att spelet tar upp hela bredden på alla mobila enheter (upp till maximala spelstorleken vi definiferade).
+Du bör nu se att spelet tar upp hela bredden på alla mobila enheter (upp till maximala spelstorleken vi definierade).
 
 ![](http://lessmilk.com/imgtut/FB3/4.png)
 
