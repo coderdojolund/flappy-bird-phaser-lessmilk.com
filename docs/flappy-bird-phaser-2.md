@@ -19,8 +19,9 @@ Du kan se att:
 
 Den första biten är lätt. Vi behöver bara lägga till detta i funktionen `update()`.
 
-    if (this.bird.angle < 20)
+    if (this.bird.angle < 20) {
         this.bird.angle += 1; 
+    }
 
 För andra biten skulle vi helt enkelt kunna lägga till `this.bird.angle = -20;` i funktionen `jump()`. Men att plötsligt ändra vinkeln ser knasigt ut. Istället ska vi få fågeln att ändra sin vinkel under kort tid. Vi kan göra det genom att skapa en animering i funktionen `jump()`.
 
@@ -66,8 +67,9 @@ Nu skapar vi den nya funktionen `hitPipe()`.
     hitPipe: function() {
         // If the bird has already hit a pipe, do nothing
         // It means the bird is already falling off the screen
-        if (this.bird.alive == false)
+        if (this.bird.alive == false) {
             return;
+        }
 
         // Set the alive property of the bird to false
         this.bird.alive = false;
@@ -76,15 +78,16 @@ Nu skapar vi den nya funktionen `hitPipe()`.
         game.time.events.remove(this.timer);
 
         // Go through all the pipes, and stop their movement
-        this.pipes.forEach(function(p){
+        this.pipes.forEach(function (p){
             p.body.velocity.x = 0;
         }, this);
     }, 
 
 Slutligen så vill vi inte kunna få fågeln att hoppa när den är död. Så vi ändrar `jump()` genom att lägga till de här två raderna i funktionens början.
 
-    if (this.bird.alive == false)
+    if (this.bird.alive == false) {
         return;  
+    }
 
 Och så var vi klara med att lägga till animeringar.
 
