@@ -134,7 +134,7 @@ Och direkt nedanför den koden lägger vi till de här två nya funktionerna.
         game.state.start('main');
     },
 
-[Här kan du se kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/1.1_Basic_code_template...1.2_Add_bird_sprite)
+[Här ser du kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/1.1_Basic_code_template...1.2_Add_bird_sprite)
 
 ## Testning
 
@@ -212,7 +212,7 @@ Nu kan du spara dina filer och testa koden. Det börjar så sakteliga likna ett 
 
 ![](http://lessmilk.com/imgtut/FB1/4.gif)
 
-[Här kan du se kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/1.2_Add_bird_sprite...1.3_Add_pipes)
+[Här ser du kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/1.2_Add_bird_sprite...1.3_Add_pipes)
 
 ## Poängräkning och krockar
 
@@ -238,7 +238,7 @@ Och vi är klara! Grattis; nu har du en Flappy Bird-klon i HTML5.
 
 ![](http://lessmilk.com/imgtut/FB1/5.gif)
 
-[Här kan du se kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/1.3_Add_pipes...1.4_Scoring_and_collisions)
+[Här ser du kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/1.3_Add_pipes...1.4_Scoring_and_collisions)
 
 ## Vad händer härnäst?
 
