@@ -131,10 +131,9 @@ Och direkt nedanför den koden lägger vi till de här två nya funktionerna.
 
 ## Testning
 
-Att köra ett Phaser-spel direkt i webbläsaren fungerar inte, eftersom JavaScript inte får läsa filer från ditt lokala filsystem. FÖr att lösa det behöver vi en webbläsare för att spela och testa vårt spel.
+Att köra ett Phaser-spel direkt i webbläsaren fungerar inte, eftersom JavaScript inte får läsa filer från ditt lokala filsystem. För att lösa det behöver vi en webbläsare för att spela och testa vårt spel.
 
 Det finns många sätt att ha en lokal webbserver på en dator och vi går snabbt igenom tre här nedan.
-
 
 * Använd Brackets. Öppna mappen som innehåller spelet i [Brackets editor](http://brackets.io/) och klicka på den lilla blixtikonen som finns uppe i högra hörnet i fönstret. Detta öppnar direkt din webbläsare med en aktuell förhandsgranskning från en webbserver. Det är förmodligen den enklaste lösningen.
 * Använd appar. Du kan ladda ner [WAMP](http://www.wampserver.com/en/) (Windows) eller [MAMP](https://www.mamp.info/en/) (Mac). Båda har rena användargränssnitt och enkla installationsanvisningar finns. 
