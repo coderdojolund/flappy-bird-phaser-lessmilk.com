@@ -189,13 +189,16 @@ Den föregående funktionen skapar ett rör, men vi behöver visa sex rör på r
     addRowOfPipes: function() {
         // Randomly pick a number between 1 and 5
         // This will be the hole position
-        var hole = Math.floor(Math.random() * 5) + 1;
+        var i,
+            hole = Math.floor(Math.random() * 5) + 1;
 
         // Add the 6 pipes 
         // With one big hole at position 'hole' and 'hole + 1'
-        for (var i = 0; i < 8; i++)
-            if (i != hole && i != hole + 1) 
-                this.addOnePipe(400, i * 60 + 10);   
+        for (i = 0; i < 8; i += 1) {
+            if (i !== hole && i !== hole + 1) {
+                this.addOnePipe(400, i * 60 + 10);
+            }
+        }
     },
 
 Här är en bild för att göra saker och ting tydligare, för fallet `hole = 2`.
@@ -209,6 +212,8 @@ För att faktiskt lägga till rör i spelet behöver vi anropa funktionen `addRo
 Nu kan du spara dina filer och testa koden. Det börjar så sakteliga likna ett riktigt spel.
 
 ![](http://lessmilk.com/imgtut/FB1/4.gif)
+
+[Här kan du se kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/1.2_Add_bird_sprite...1.3_Add_pipes)
 
 ## Poängräkning och krockar
 
@@ -233,6 +238,8 @@ Sedan lägger vi till den här raden i funktionen `update()` för att anropa `re
 Och vi är klara! Grattis; nu har du en Flappy Bird-klon i HTML5.
 
 ![](http://lessmilk.com/imgtut/FB1/5.gif)
+
+[Här kan du se kodändringarna för det här avsnittet](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/compare/1.3_Add_pipes...1.4_Scoring_and_collisions)
 
 ## Vad händer härnäst?
 
