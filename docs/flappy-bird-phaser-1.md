@@ -10,9 +10,8 @@ Om du vill spela spelet som vi ska bygga,  [klicka här](http://lessmilk.com/gam
 
 ## Sätta igång
 
-För att starta handledningen behöver du ladda ner [den här tomma mallen](http://lessmilk.com/content/flappy-bird/empty.zip) som jag har förberett. I den hittar du
+För att starta handledningen behöver du ladda ner [den här tomma mallen](https://github.com/coderdojolund/flappy-bird-phaser-lessmilk.com/archive/1.0_Empty_repo.zip) som jag har förberett. I den hittar du
 
-*   phaser.min.js, Phaser-ramverket v2.4.3.
 *   *index.html*, där spelet visas på skärmen.
 *   *main.js*, en fil där vi skriver all vår kod.
 *   *assets/*, en mapp med två bilder och en ljudeffekt.
