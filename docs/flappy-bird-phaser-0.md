@@ -13,4 +13,9 @@
 * Du kan nu starta brackets från den mappen.
 
 ## 3. Öppna din projektmapp inifrån Brackets
-(Skärmdump)
+![brackets-open-folder](https://cloud.githubusercontent.com/assets/4598641/16362430/c55b5346-3bae-11e6-909a-708a371ff3d3.png)
+
+Det är viktigt att du öppnar din projektmapp på rätt sätt. Ett projekt har alltid minst två filer: en *html*-fil som laddar koden och en *js*-fil med själva koden. 
+
+Därför ska du alltid använda Brackets *File > Open Folder* för att öppna din projektmapp. De enskilda filerna ser du sedan till vänster i Brackets egen filöversikt.
+
