@@ -2,7 +2,7 @@
 
 ## 1. Ladda ner Brackets
 * Du hittar Brackets [här](http://brackets.io/).
-* Ladda ner med knappen "Download"
+* Ladda ner med knappen *Download*
 
 ## 2a. Starta installationen (Windows)
 * Installationsprogrammet laddas ner. Filen heter något i stil med *Brackets.Release.1.7.msi*. 
@@ -12,5 +12,5 @@
 * Du har laddat ner en fil som heter något i stil med *Brackets.Release.1.7.dmg*. Flytta filen till mappen *Applications* eller motsvarande. 
 * Du kan nu starta brackets från den mappen.
 
-## Öppna din projektmapp inifrån Brackets
+## 3. Öppna din projektmapp inifrån Brackets
 (Skärmdump)
