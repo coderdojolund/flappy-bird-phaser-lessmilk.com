@@ -1,4 +1,5 @@
 # Installera brackets.io för att koda i JavaScript
+[YouTube-versionen hittar du här](https://youtu.be/uxASm3-G5Do)
 
 ## 1. Ladda ner Brackets
 * Du hittar Brackets [här](http://brackets.io/).
