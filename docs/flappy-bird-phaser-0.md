@@ -17,5 +17,6 @@
 
 Det är viktigt att du öppnar din projektmapp på rätt sätt. Ett projekt har alltid minst två filer: en *html*-fil som laddar koden och en *js*-fil med själva koden. 
 
-Därför ska du alltid använda Brackets *File > Open Folder* för att öppna din projektmapp. De enskilda filerna ser du sedan till vänster i Brackets egen filöversikt.
+Därför ska du alltid använda Brackets *File > Open Folder* för att öppna din projektmapp. Projektets filer ser du till vänster i Bracketfönstret.
 
+![brackets-files](https://cloud.githubusercontent.com/assets/4598641/16362461/dbd1043a-3baf-11e6-85ce-52a960bd3a66.png)
