@@ -10,7 +10,7 @@
 * Klicka på den nerladdade filen för att starta installationen i Windows.
 
 ## 2b. Starta installationen (Mac)
-* Du har laddat ner en fil som heter något i stil med *Brackets.Release.1.7.dmg*. Flytta filen till mappen *Applications* eller motsvarande. 
+* Du har laddat ner en fil som heter något i stil med *Brackets.Release.1.7.dmg*. Flytta filen till mappen *Applications*, *Program* eller motsvarande. 
 * Du kan nu starta brackets från den mappen.
 
 ## 3. Öppna din projektmapp inifrån Brackets
